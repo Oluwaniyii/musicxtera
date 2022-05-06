@@ -1,8 +1,8 @@
 ##MusicXtra Ui
 
-[![Semantic description of image](./_readme/index.png)]([Oluwaniyii.github.com/musixtra])
+[![Semantic description of image](./_readme/index.png)](https://oluwaniyii.github.io/musicxtra/)
 
-[![Semantic description of image](./_readme/index-zoomed.png)]([Oluwaniyii.github.com/musixtra])
+[![Semantic description of image](./_readme/index-zoomed.png)](https://oluwaniyii.github.io/musicxtra/)
 
 Ohayo
 
