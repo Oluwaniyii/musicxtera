@@ -1,0 +1,35 @@
+/* static */
+body {
+  animation: fadeIn 1.2s ease-in-out;
+}
+.sr_hottest_latest_album {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.sr_upcoming_shows,
+.sr_gallery,
+.sr_live_now,
+.sr_contact_us {
+  opacity: 0;
+}
+
+/*slide*/
+
+.sr_latest_release_desc,
+.sr_recent_posts_h1 {
+  opacity: 0;
+}
+.sr_latest_release_port,
+.sr_recent_posts_port {
+  opacity: 0;
+  transform: translateY(300px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

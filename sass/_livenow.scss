@@ -1,0 +1,74 @@
+.live-now {
+  margin-top: 100px;
+  height: 600px;
+  background-image: url('https://ik.imagekit.io/zzajmh3pzny/static-ui-assests/musixtra/simon-noh-0rmby-3OTeI-unsplash_hZXtwipBK.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651800151795');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .join-live {
+    .join-live-content {
+      padding: 0 15px;
+    }
+    .p {
+      font-size: 16px;
+    }
+    p.video {
+      color: $secondary;
+    }
+    .white {
+      font-size: 17px;
+      color: $white;
+    }
+    .my-2 {
+      margin: 2rem 0;
+      color: #aaadc2;
+      font-size: 17px;
+      line-height: 2;
+    }
+    .Join-live-now {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      color: $white;
+      .icon.play {
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: #844ad5;
+        font-size: 40px;
+        color: $white;
+      }
+    }
+  }
+}
+@media (min-width: 750px) {
+  .live-now {
+    height: 600px;
+    background-image: url(../images/gallery/d4videobg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .container {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .join-live {
+      width: 50%;
+    }
+  }
+}

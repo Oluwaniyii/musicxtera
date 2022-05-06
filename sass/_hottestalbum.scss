@@ -1,0 +1,227 @@
+// hottest album
+.hottest-latest-album {
+	transform: translateY(-10px);
+	margin-top: -70px;
+	background-image: linear-gradient(
+		transparent,
+		#01010d,
+		#01010df6,
+		#01010d,
+		#01010d,
+		$primary,
+		$primary
+	);
+
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	.album {
+		// min-height: 50vh;
+	}
+	.album.album-picture,
+	.bg-img {
+		background-image: url('https://ik.imagekit.io/zzajmh3pzny/static-ui-assests/musixtra/wes-hicks_zwn-0D1nj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651800168726');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.album.album-picture {
+		position: relative;
+		.album-cover {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(61, 60, 60, 0.425);
+			.album-text {
+				height: 100%;
+				color: $white;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
+				* {
+					margin: 20px 0;
+				}
+				h2 {
+					letter-spacing: 2px;
+				}
+				h1 {
+					font-family: "Staatliches", cursive;
+					font-family: $font_special;
+					font-size: 6rem;
+				}
+			}
+		}
+	}
+	.album.album-playlist {
+		position: relative;
+
+		.bg-img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			filter: brightness(10%);
+		}
+
+		.album-playlist-sections {
+			list-style: none;
+			position: relative;
+			// height: 90vh; /*********/
+			background-color: #20203f8f;
+
+			.desc {
+				padding: 15px;
+				padding-top: 25px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.featured-album {
+				text-transform: capitalize;
+				text-decoration: none;
+				color: $secondary;
+			}
+			h1 {
+				margin: 3px 0;
+			}
+			.purchase {
+				margin: 15px 5px;
+				font-size: 14px;
+				width: 200px;
+				.icon {
+					margin-right: 5px;
+				}
+			}
+			.playlist-items {
+				list-style: none;
+				margin-bottom: 60px;
+
+				.playlist-item {
+					padding: 20px;
+					display: flex;
+					align-items: center;
+
+					.icon {
+						font-size: 15px;
+						margin-right: 5px;
+					}
+					.playlist-item-playbtn {
+						font-size: 10px;
+						color: $secondary;
+						margin-right: 10px;
+					}
+					.playlist-item-name {
+						width: 70%;
+						font-weight: 700;
+					}
+					.play.invinsible {
+						width: 200px;
+						margin-left: auto;
+						margin-right: 10px;
+						text-align: right;
+						visibility: hidden;
+						color: $fade;
+
+						.icon{
+							color: $fade;
+						}
+
+						.icon:hover {
+							color: $white;
+						}
+					}
+				}
+				.playlist-item.current,
+				.playlist-item:hover {
+					color: $white;
+				}
+				.playlist-item:hover {
+					background-color: #101022a4;
+					// color: $white;
+				}
+				.playlist-item:hover .play.invinsible{
+					visibility: visible;
+				}
+			}
+		}
+		//
+		.playing {
+			padding-bottom: 10px;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			.progress-bar-line {
+				background-color: #4f4f5256;
+				height: 2px;
+			}
+			.panel {
+				margin-top: 15px;
+				padding: 5px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				font-size: 14px;
+				line-height: 1.3rem;
+				letter-spacing: 2px;
+
+				.playing-name {
+					.title {
+						color: $white;
+						letter-spacing: 1px;
+					}
+				}
+				.controls {
+					display: flex;
+					align-items: center;
+					.icon {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					.next-prev{
+						width: 40px;
+						height: 40px;
+						font-size: 25px;
+					}
+					.play {
+						margin: 0 5px;
+						width: 60px;
+						height: 60px;
+						background-color:#844ad5;
+						border-radius: 50%;
+						font-size: 30px;
+						color: $white;
+					}
+				}
+			}
+		}
+		//
+	}
+}
+
+
+@media (min-width: 1100px) {
+	.hottest-latest-album {
+		.container {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+	.album.album-picture {
+		width: 40%;
+	}
+	.album.album-playlist {
+		width: 60%;
+	}
+	.desc {
+		flex-direction: row !important;
+	}
+}

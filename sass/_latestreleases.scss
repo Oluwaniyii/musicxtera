@@ -1,0 +1,135 @@
+.latest-releases {
+	margin-top: 70px;
+	position: relative;
+
+	.latest-release-description {
+		margin-bottom: 3rem;
+		h1 {
+			font-size: 45px;
+		}
+		.view-all-albums {
+			float: right;
+		}
+	}
+
+	.latest-releases-portfolio {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+		grid-gap: 0.5em;
+		justify-content: space-between;
+	}
+	.latest-releases-portfolio .portfolio-item {
+		width: 100%;
+		* {
+			transition: all 0.5s ease-in-out;
+		}
+
+		.portfolio-item-content {
+			width: 100%;
+			margin: 0 auto;
+			position: relative;
+
+			.vinyl {
+				position: absolute;
+				top: 47%;
+				left: 50%;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: -1;
+
+				.vinyl-holder {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+					// animation: rotate 7s linear infinite;
+
+					.vinyl-disk-img {
+						width: 90%;
+					}
+					.vinyl-album-img {
+						width: 30%;
+						border-radius: 50%;
+						position: absolute;
+					}
+				}
+			}
+
+			.portfolio-img {
+				position: relative;
+				top: 40px;
+			}
+			.caption {
+				margin-top: 50px;
+				text-align: center;
+				line-height: 1.5;
+				h3 {
+					font-size: 20px;
+					color: white;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (min-width: 650px) {
+	.latest-releases {
+		.latest-releases-portfolio {
+			grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+
+			.latest-releases-portfolio .portfolio-item {
+				width: 100%;
+				.portfolio-item-content {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1040px) {
+	.latest-releases .latest-releases-portfolio {
+		.portfolio-item {
+			width: 270px !important;
+		}
+	}
+	.latest-releases-portfolio .portfolio-item:hover {
+		.portfolio-item-content {
+			.vinyl {
+				right: 0%;
+				transform: translate(0%, -50%);
+				// animation: rotate 7s linear infinite;
+				.vinyl-holder {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+					animation: rotate 7s linear infinite;
+
+					.vinyl-disk-img {
+						width: 90%;
+					}
+					.vinyl-album-img {
+						width: 30%;
+						border-radius: 50%;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+}
